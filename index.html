@@ -36,58 +36,6 @@ header {
            .menu-icon {
                display: inline-block;
            }
-        .menu-icon {
-            position: fixed;
-            top: 0px;
-            left: 20px;
-            z-index: 2;
-            font-size: 24px;
-            cursor: pointer;
-            margin: 0px auto;
-            padding-top: 0px;
-            background-color: #4c4c4c;
-        }
-
-        .menu-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(76, 76, 76, 0.85); /* Adjust the alpha value (0.8 in this example) for transparency */
-            color: #929292;
-            display: none;
-            z-index: 1;
-        }
-
-        .menu-content {
-            text-align: center;
-            padding: 50px;
-            text-decoration: none;
-            font-size: 3.5rem;
-            color: #929292;
-        }
-      
-        .menu-content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu-content li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        .menu-content a {
-        text-decoration: none;
-        color: #929292;
-        display: block; /* Add this line to make the entire area clickable */
-        padding: 10px; /* Add padding for better clickability */
-        }
-       .menu-content li.active a {
-        color: white;
-        text-decoration: none;
-        }
 
         .close {
     position: absolute;
@@ -156,7 +104,7 @@ header {
 
        /* Style the video captions (toggle button) */
        .video-caption {
-           font-size: 24px;
+           font-size: 18px;
            margin-bottom: 10px;
            text-align: center;
            cursor: pointer;
@@ -236,30 +184,9 @@ header {
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-     <div class="menu-icon" onclick="toggleMenu()">
-        <img src="../icon.jpg" alt="Menu" style="width: 100px; height: 100px;">
-    </div>
+     
 
-    <div class="menu-container" id="menuContainer">
-        <span class="close" onclick="closeMenu()">&times;</span>
-        <div class="menu-content">
-            <ul>
-                <li><a href="../portfolio/port.html">Back to Portfolios main page</a></li><br>
-                <li class="active"><a href="../digital/digital.html">Pathways</a></li><br>
-                <li><a href="../empty space/emptyspace.html">From Zero to infinity</a></li><br>
-                <li><a href="../fibonacci/fibonacci.html">Fibonacci</a></li><br>
-                <li><a href="../fire/fire.html">Fractured relationships</a></li><br>
-                <li><a href="../war/war.html">War, Peace, Rebirth</a></li><br>
-                <li <a href="../whatsnext/junk.html">Contact</a></li><br>
-                
-                <a href="mailto:shivanimathurart@gmail.com" style="cursor: pointer;"><i class="fas fa-envelope"></i></a>
-                <li><a href="https://www.instagram.com/shivanisart/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" style="cursor: pointer;"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://linkedin.com/in/shivani-mathur-a480438" style="cursor: pointer;"><i class="fab fa-linkedin"></i></a></li>
-              
-  
-            </ul>
-        </div>
-    </div>
+    
 
     <header>
         <div class="page-container">
@@ -274,8 +201,8 @@ header {
         <!-- Video 1 -->
         <div class="video-item">
             <div onclick="toggleVideo(0)" loop>
-                <video poster="thedoor-poster.jpg" class="poster" loop playsinline>
-                    <source src="thedoor.mp4" type="video/mp4">
+                <video poster="egg.jpg" class="poster" loop playsinline>
+                    <source src=".mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <!-- Video caption (toggle button) -->
@@ -283,7 +210,16 @@ header {
                 </div>
                 <!-- Video description -->
                 <div class="video-description">
-                    <p>"The door" is a two-part artwork, featuring an oil painting and a digital generative work that invites us to contemplate the role of our choices in shaping our destiny when we encounter a closed door.</p>
+                    <p>Image 1<br>
+
+Title and File name: Hiranya Garbha<br>
+
+Year made: 2012<br>
+Dimensions: 70 cm<br>
+Material: Sculpture with resin and paint, accompanied by a one-time performance<br>
+
+This sculpture was exhibited in Covent Garden for 40 days in 2012 and subsequently auctioned for charity. Before the auction, a live performance opposite St. Paul’s Churchyard, featured the egg being painted in front of an audience.<br>The performance symbolised birth. Part of a collection of 209 eggs displayed across London, it was voted the third “most popular egg” by the public.
+</p>
                 </div>
             </div>
         </div>
@@ -316,13 +252,13 @@ header {
         <div class="video-caption" style="background-color: #4c4c4c;" onclick="toggleDescription(2)"><br> <i class="fas fa-play"></i><br><br>Rock, Paper, Scissors. 2022 <br> Digital generative art in a collaborative performance.<br><br></div>
         <!-- Video description -->
         <div class="video-description">
-            <p>Image 3
+            <p>Image 3<br>
 
-Title and File name: Hologram of Our Universe
+Title and File name: Hologram of Our Universe<br>
 
-Year made: 2022
-Duration: 3–4 minutes
-Material: Digital and performance
+Year made: 2022<br>
+Duration: 3–4 minutes<br>
+Material: Digital and performance<br>
 
 At the 2022 Art and Science Symposium at Central Saint Martins, Hologram of Our Universe merged a 3D digital holographic projection with live human movement, blurring the lines between human and machine-led performance. Inspired by physics, this work explored the idea of the universe as a projection, shifting between cosmic forms and geometric abstractions. The performer’s movements interacted with the hologram, creating a dynamic dialogue that questioned identity, agency, and our evolving relationship with machines in the digital age.
 </p>
@@ -343,11 +279,11 @@ At the 2022 Art and Science Symposium at Central Saint Martins, Hologram of Our 
         <div class="video-description">
             <p>Video 1
 
-Title and File name: Rock Paper Scissors
+Title and File name: Rock Paper Scissors<br>
 
-Year made: 2022
-Duration: 5 minutes
-Material: Violin, charcoal, and algorithms that respond to body motion to create a digital image
+Year made: 2022<br>
+Duration: 5 minutes<br>
+Material: Violin, charcoal, and algorithms that respond to body motion to create a digital image<br>
 
 A three-way collaboration: A violinist begins playing music. A charcoal artist responds to the music by drawing. An algorithm tracks her body movements, creating a digital image of snow dispersing on a screen, to which the violinist responds by altering his music, completing a dynamic loop of interaction.
 </p>

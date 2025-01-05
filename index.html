@@ -43,7 +43,7 @@
         }
 
         .video-item {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .poster, .video-item img {
@@ -51,6 +51,15 @@
             height: auto;
             object-fit: cover;
             cursor: pointer;
+            border-radius: 5px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
         }
 
         .video-caption {
@@ -89,7 +98,7 @@
 <body>
     <header>
         <h1>Submission for London Live</h1>
-        <p class="header-description">Whitechapel gallery, 2025</p>
+        <p class="header-description">Whitechapel Gallery, 2025</p>
     </header>
     <div class="video-container">
         <!-- Image 1 -->
@@ -130,7 +139,7 @@
 
         <!-- Video 4 -->
         <div class="video-item">
-            <video poster="RockPaperScissors-poster.jpg" playsinline onclick="toggleVideo(3)">
+            <video poster="RockPaperScissors-poster.jpg" onclick="toggleVideo(this)">
                 <source src="Rock, Paper, Scissors 2.MP4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -145,7 +154,7 @@
 
         <!-- Video 5 -->
         <div class="video-item">
-            <video poster="pathwaysholo-poster.jpg" playsinline onclick="toggleVideo(4)">
+            <video poster="pathwaysholo-poster.jpg" onclick="toggleVideo(this)">
                 <source src="2025.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -159,19 +168,15 @@
         </div>
     </div>
     <footer>
-        <p>“Live art empowers us to imagine and actively shape new realities—this conviction  lies at the heart of my practice.
-
-</p>
+        <p>“Art has the power to transform humanity. That is my inspiration.”<br>
+        &copy; Copyright @the artist@ All rights reserved.</p>
     </footer>
 
     <script>
         let currentVideo = null;
 
         // Toggle video play/pause
-        function toggleVideo(index) {
-            const videos = document.querySelectorAll('video');
-            const video = videos[index];
-
+        function toggleVideo(video) {
             if (video.paused) {
                 if (currentVideo && currentVideo !== video) {
                     currentVideo.pause();
@@ -181,10 +186,6 @@
             } else {
                 video.pause();
             }
-
-            videos.forEach((v, i) => {
-                if (i !== index) v.pause();
-            });
         }
 
         // Toggle description visibility

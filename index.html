@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Mathur - Pathways</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            background-color: #4c4c4c;
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header, footer {
+            background-color: #4c4c4c;
+            color: #929292;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .header-description {
+            margin-top: 10px;
+            color: #929292;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .video-item {
+            margin-bottom: 30px;
+        }
+
+        .poster, .video-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .video-caption {
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #4c4c4c;
+            color: #929292;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .video-description {
+            display: none;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #4c4c4c;
+            background-color: #4c4c4c;
+            color: #929292;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer p:last-child {
+            text-align: center;
+            color: #929292;
+        }
+
+        .more-info {
+            cursor: pointer;
+            color: #929292;
+            text-align: center;
+            background-color: #4c4c4c;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Submission for London Live</h1>
+        <p class="header-description">Whitechapel Gallery, 2025</p>
+    </header>
+    <div class="video-container">
+        <!-- Image 1 -->
+        <div class="video-item">
+            <img src="egg.jpeg" alt="Hiranya Garbha" class="poster" onclick="toggleDescription(0)">
+            <div class="video-caption">
+                Image 1: Sculpture and performance<br>Hiranya Garbha
+                <span class="more-info" onclick="toggleDescription(0)">More Info</span>
+            </div>
+            <div class="video-description" id="description-0">
+                <p>Title: Hiranya Garbha<br>Year made: 2012<br>Dimensions: 70 cm<br>Material: Sculpture with resin and paint, accompanied by a one-time performance<br><br>
+                This sculpture was exhibited in Covent Garden for 40 days in 2012 and subsequently auctioned for charity. Before the auction, a live performance opposite St. Paul’s Churchyard featured the egg being painted in front of an audience. The performance symbolized birth. Part of a collection of 209 eggs displayed across London, it was voted the third “most popular egg” by the public.</p>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="video-item">
+            <img src="Pol.jpg" alt="Pathways of Light" class="poster" onclick="toggleDescription(1)">
+            <div class="video-caption">
+                Image 2: Installation<br>Pathways of Light
+                <span class="more-info" onclick="toggleDescription(1)">More Info</span>
+            </div>
+            <div class="video-description" id="description-1">
+                <p>Title: Pathways of Light<br>Year made: 2022<br>Dimensions: 33 x 33 x 150 cm<br>Material: Installation art with broken Perspex mirror, eggshell, and light<br><br>
+                This sculptural installation shares the title and theme with the proposed performance for the Whitechapel Gallery (2025). The image shows part of a larger installation exhibited at Central Saint Martins and was recognized with a prestigious LVMH Sustainability Award.</p>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="video-item">
+            <img src="holo.jpg" alt="Hologram of Our Universe" class="poster" onclick="toggleDescription(2)">
+            <div class="video-caption">
+                Image 3: Performance<br>Hologram of Our Universe
+                <span class="more-info" onclick="toggleDescription(2)">More Info</span>
+            </div>
+            <div class="video-description" id="description-2">
+                <p>Title: Hologram of Our Universe<br>Year made: 2022<br>Duration: 3–4 minutes<br>Material: Digital and performance<br><br>
+                At the 2022 Art and Science Symposium at Central Saint Martins, Hologram of Our Universe merged a 3D digital holographic projection with live human movement, blurring the lines between human and machine-led performance. Inspired by physics, this work explored the idea of the universe as a projection, shifting between cosmic forms and geometric abstractions.</p>
+            </div>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="video-item">
+            <video poster="RockPaperScissors-poster.jpg" controls>
+                <source src="Rock, Paper, Scissors.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-caption">
+                Video 1: Live performance<br>Rock, Paper, Scissors
+                <span class="more-info" onclick="toggleDescription(3)">More Info</span>
+            </div>
+            <div class="video-description" id="description-3">
+                <p>Title: Rock, Paper, Scissors<br>Year made: 2022<br>Duration: 5 minutes<br>Material: Violin, charcoal, and algorithms that respond to body motion to create a digital image<br><br>
+                A three-way collaboration: A violinist begins playing music. A charcoal artist responds to the music by drawing. An algorithm tracks her body movements, creating a digital image of snow dispersing on a screen, to which the violinist responds by altering his music, completing a dynamic loop of interaction.</p>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-item">
+            <video poster="pathwaysholo-poster.jpg" controls>
+                <source src="VIDEO-2025-01-04-13-07-46.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-caption">
+                Video 2: Concept video for proposed performance<br>Pathways of Light
+                <span class="more-info" onclick="toggleDescription(4)">More Info</span>
+            </div>
+            <div class="video-description" id="description-4">
+                <p>Title: Pathways of Light (Proposed Work for Whitechapel Gallery)<br>Year: 2025 (currently under development)<br>Duration: Variable (suggested 15 minutes)<br>Material: Hats made from broken Perspex mirrors and eggshells (similar to the 2022 installation), light, and sound<br><br>
+                This proposed performance builds on the 2022 installation of the same title, incorporating wearable sculptures and dynamic light and sound to create an immersive experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script>
+        // Toggle video descriptions
+        function toggleDescription(index) {
+            const descriptions = document.querySelectorAll('.video-description');
+            descriptions.forEach((desc, i) => {
+                // Check if this is the description you want to toggle
+                if (i === index) {
+                    // Toggle the visibility of the description
+                    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+                } else {
+                    // Hide all other descriptions
+                    desc.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

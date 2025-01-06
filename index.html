@@ -92,7 +92,7 @@
             text-align: center;
             color: #929292;
         }
-        
+
         .more-info {
             cursor: pointer;
             color: #929292;
@@ -115,9 +115,9 @@
         <div class="video-item">
             <img src="egg.jpeg" alt="Hiranya Garbha" class="poster" onclick="toggleDescription(0)">
             <div class="video-caption">
-              </i> Image 1: Sculpture and performance<br>Hiranya Garbha
+              Image 1: Sculpture and performance<br>Hiranya Garbha
             </div>
-            <div class="video-description">
+            <div class="video-description" id="description-0">
                 <p>Title: Hiranya Garbha<br>Year made: 2012<br>Dimensions: 70 cm<br>Material: Sculpture with resin and paint, accompanied by a one-time performance<br><br>
                 This sculpture was exhibited in Covent Garden for 40 days in 2012 and subsequently auctioned for charity. Before the auction, a live performance opposite St. Paul’s Churchyard featured the egg being painted in front of an audience. The performance symbolized birth. Part of a collection of 209 eggs displayed across London, it was voted the third “most popular egg” by the public.</p>
                 <div class="more-info" onclick="toggleDescription(0)">More Info</div> 
@@ -128,9 +128,9 @@
         <div class="video-item">
             <img src="Pol.jpg" alt="Pathways of Light" class="poster" onclick="toggleDescription(1)">
             <div class="video-caption">
-             </i> Image 2: Installation<br>Pathways of Light
+             Image 2: Installation<br>Pathways of Light
             </div>
-            <div class="video-description">
+            <div class="video-description" id="description-1">
                 <p>Title: Pathways of Light<br>Year made: 2022<br>Dimensions: 33 x 33 x 150 cm<br>Material: Installation art with broken Perspex mirror, eggshell, and light<br><br>
                 This sculptural installation shares the title and theme with the proposed performance for the Whitechapel Gallery (2025). The image shows part of a larger installation exhibited at Central Saint Martins and was recognized with a prestigious LVMH Sustainability Award.</p>
                 <div class="more-info" onclick="toggleDescription(1)">More Info</div>
@@ -141,9 +141,9 @@
         <div class="video-item">
             <img src="holo.jpg" alt="Hologram of Our Universe" class="poster" onclick="toggleDescription(2)">
             <div class="video-caption">
-              </i><br><br>Image 3: Performance<br>Hologram of Our Universe
+                Image 3: Performance<br>Hologram of Our Universe
             </div>
-            <div class="video-description">
+            <div class="video-description" id="description-2">
                 <p>Title: Hologram of Our Universe<br>Year made: 2022<br>Duration: 3–4 minutes<br>Material: Digital and performance<br><br>
                 At the 2022 Art and Science Symposium at Central Saint Martins, Hologram of Our Universe merged a 3D digital holographic projection with live human movement, blurring the lines between human and machine-led performance. Inspired by physics, this work explored the idea of the universe as a projection, shifting between cosmic forms and geometric abstractions.</p>
                 <div class="more-info" onclick="toggleDescription(2)">More Info</div>  
@@ -152,14 +152,14 @@
 
         <!-- Video 1 -->
         <div class="video-item">
-            <video poster="RockPaperScissors-poster.jpg" controls onclick="toggleDescription(3)">
+            <video poster="RockPaperScissors-poster.jpg" controls>
                 <source src="Rock, Paper, Scissors.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="video-caption">
-          </i> Video 1: Live performance<br>Rock, Paper, Scissors
+                Video 1: Live performance<br>Rock, Paper, Scissors
             </div>
-            <div class="video-description">
+            <div class="video-description" id="description-3">
                 <p>Title: Rock, Paper, Scissors<br>Year made: 2022<br>Duration: 5 minutes<br>Material: Violin, charcoal, and algorithms that respond to body motion to create a digital image<br><br>
                 A three-way collaboration: A violinist begins playing music. A charcoal artist responds to the music by drawing. An algorithm tracks her body movements, creating a digital image of snow dispersing on a screen, to which the violinist responds by altering his music, completing a dynamic loop of interaction.</p>
                 <div class="more-info" onclick="toggleDescription(3)">More Info</div>
@@ -167,32 +167,35 @@
         </div>
 
         <!-- Video 2 -->
-<div class="video-item">
-    <video poster="pathwaysholo-poster.jpg" controls>
-        <source src="VIDEO-2025-01-04-13-07-46.mp4" type="video/mp4">
-        Your browser does not support the video tag. Please update your browser.
-    </video>
-    <div class="video-caption">
-        Video 2: Concept video for proposed performance<br>Pathways of Light
+        <div class="video-item">
+            <video poster="pathwaysholo-poster.jpg" controls>
+                <source src="VIDEO-2025-01-04-13-07-46.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-caption">
+                Video 2: Concept video for proposed performance<br>Pathways of Light
+            </div>
+            <div class="video-description" id="description-4">
+                <p>Title: Pathways of Light (Proposed Work for Whitechapel Gallery)<br>Year: 2025 (currently under development)<br>Duration: Variable (suggested 15 minutes)<br>Material: Hats made from broken Perspex mirrors and eggshells (similar to the 2022 installation), light, and sound<br><br>
+                This proposed performance builds on the 2022 installation of the same title, incorporating wearable sculptures and dynamic light and sound to create an immersive experience.</p>
+                <div class="more-info" onclick="toggleDescription(4)">More Info</div>
+            </div>
+        </div>
     </div>
-    <div class="video-description">
-        <p>Title: Pathways of Light (Proposed Work for Whitechapel Gallery)<br>Year: 2025 (currently under development)<br>Duration: Variable (suggested 15 minutes)<br>Material: Hats made from broken Perspex mirrors and eggshells (similar to the 2022 installation), light, and sound<br><br>
-        This proposed performance builds on the 2022 installation of the same title, incorporating wearable sculptures and dynamic light and sound to create an immersive experience.</p>
-        <div class="more-info" onclick="toggleDescription(4)">More Info</div>
-    </div>
-</div>  
-    </div>
-    <footer>
-    </footer>
+
+    <footer></footer>
 
     <script>
         // Toggle video descriptions
         function toggleDescription(index) {
             const descriptions = document.querySelectorAll('.video-description');
             descriptions.forEach((desc, i) => {
+                // Check if this is the description you want to toggle
                 if (i === index) {
-                    desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+                    // Toggle the visibility of the description
+                    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
                 } else {
+                    // Hide all other descriptions
                     desc.style.display = 'none';
                 }
             });

@@ -194,20 +194,31 @@ footer p:last-child {
     <footer></footer>
 
     <script>
-        // Toggle video descriptions
-        function toggleDescription(index) {
-            const descriptions = document.querySelectorAll('.video-description');
-            descriptions.forEach((desc, i) => {
-                // Check if this is the description you want to toggle
-                if (i === index) {
-                    // Toggle the visibility of the description
-                    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
-                } else {
-                    // Hide all other descriptions
-                    desc.style.display = 'none';
-                }
+    // Toggle video descriptions
+    function toggleDescription(index) {
+        const descriptions = document.querySelectorAll('.video-description');
+        descriptions.forEach((desc, i) => {
+            if (i === index) {
+                // Toggle visibility of the selected description
+                desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+            } else {
+                // Hide all other descriptions
+                desc.style.display = 'none';
+            }
+        });
+    }
+
+    // Add event listeners for descriptions
+    document.addEventListener('DOMContentLoaded', () => {
+        const descriptions = document.querySelectorAll('.video-description');
+        descriptions.forEach((desc, index) => {
+            desc.addEventListener('click', () => {
+                // Hide the description when it's clicked
+                desc.style.display = 'none';
             });
-        }
-    </script>
+        });
+    });
+</script>
+
 </body>
 </html>
